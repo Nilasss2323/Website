@@ -1,0 +1,46 @@
+body {
+    font-family: 'Roboto';
+    background: #faf6f0;
+    color: #2a2a2a;
+    line-height: 1.6;
+}
+
+* {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+}
+
+.container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+}
+
+.header {
+        background-color: #3d2b1f;
+        position: sticky;
+        top: 0;
+        z-index: 100;
+}
+
+.header-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav a{
+        color: #faf6f0;
+        text-decoration: none;
+}
+
+.logo {
+        text-decoration: none;
+        font-size: 32px;
+        color: #faf6f0;
+}
+
+.Hero {
+        color: #faf6f0;
+}
