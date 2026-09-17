@@ -1,26 +1,126 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>СКСтиль</title> 
-        <link rel="stylesheet" href="style3.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>СКСтиль — Изделия из кожи</title>
+    <link rel="stylesheet" href="style3.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
 </head>
 <body>
-        <!-- ШАПКА -->
+
+    <!-- ШАПКА -->
     <header class="header">
-    <div class="container">
-        <div class="header-inner">
-            <a href="/" class="logo">СКСтиль</a>
-            <nav>
-                <a href="#catalog">Каталог</a>
-                <a href="#about">О нас</a>
-                <a href="#contacts">Контакты</a>
-            </nav>
+        <div class="container">
+            <div class="header-inner">
+                <a href="/" class="logo">СКСтиль</a>
+                <nav>
+                    <a href="#catalog">Каталог</a>
+                    <a href="#contacts">Контакты</a>
+                </nav>
+            </div>
         </div>
-        <h1 class="Hero"> СКСтиль
-        </h1>
-    </div>
-</header>
+    </header>
+
+    <!-- ГЕРОЙ -->
+    <section class="hero">
+        <div class="container">
+            <h1>Изделия из кожи<br>ручной работы</h1>
+            <p>Натуральная кожа, ручная работа</p>
+            <a href="#catalog" class="btn">Смотреть каталог</a>
+        </div>
+    </section>
+
+    <!-- КАТАЛОГ -->
+    <section class="catalog" id="catalog">
+        <div class="container">
+            <h2 class="catalog-title">Наши изделия</h2>
+            <div class="catalog-grid">
+
+                <div class="product-card">
+                    <div class="product-image img-1"></div>
+                    <div class="product-info">
+                        <h3 class="product-name">Документница</h3>
+                        <p class="product-desc">Ручная работа, натуральная кожа</p>
+                        <p class="product-price">10 000 ₽</p>
+                        <button class="btn-buy">Купить</button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image img-2"></div>
+                    <div class="product-info">
+                        <h3 class="product-name">Обложка на паспорт</h3>
+                        <p class="product-desc">Ручная работа, натуральная кожа</p>
+                        <p class="product-price">7 000 ₽</p>
+                        <button class="btn-buy">Купить</button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image img-3"></div>
+                    <div class="product-info">
+                        <h3 class="product-name">Обложка на паспорт</h3>
+                        <p class="product-desc">Ручная работа, натуральная кожа</p>
+                        <p class="product-price">9 000 ₽</p>
+                        <button class="btn-buy">Купить</button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image img-4"></div>
+                    <div class="product-info">
+                        <h3 class="product-name">Документница</h3>
+                        <p class="product-desc">Ручная работа, натуральная кожа</p>
+                        <p class="product-price">8 500 ₽</p>
+                        <button class="btn-buy">Купить</button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image img-5"></div>
+                    <div class="product-info">
+                        <h3 class="product-name">Клатч-бокс</h3>
+                        <p class="product-desc">Ручная работа, натуральная кожа</p>
+                        <p class="product-price">7 000 ₽</p>
+                        <button class="btn-buy">Купить</button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image img-6"></div>
+                    <div class="product-info">
+                        <h3 class="product-name">Клатч-бокс</h3>
+                        <p class="product-desc">Ручная работа, натуральная кожа</p>
+                        <p class="product-price">7 000 ₽</p>
+                        <button class="btn-buy">Купить</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- КОНТАКТЫ -->
+    <section class="contacts" id="contacts">
+        <div class="container">
+            <h2 class="contacts-title">Свяжитесь с нами</h2>
+            <div class="contacts-grid">
+                <div class="contact-item">
+                    <p class="contact-label">Телефон</p>
+                    <p class="contact-value">+7 (999) 999-99-99</p>
+                </div>
+                <div class="contact-item">
+                    <p class="contact-label">Email</p>
+                    <p class="contact-value">info@gmail.com</p>
+                </div>
+                <div class="contact-item">
+                    <p class="contact-label">Соцсети</p>
+                    <p class="contact-value">@vk</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
 </body>
 </html>
