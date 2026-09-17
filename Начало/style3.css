@@ -1,27 +1,30 @@
+/* ОБЩИЕ */
 body {
-    font-family: 'Roboto';
+    font-family: 'Roboto', sans-serif;
     background: #faf6f0;
     color: #2a2a2a;
     line-height: 1.6;
 }
 
 * {
-        box-sizing: border-box;
-        margin: 0;
-        padding: 0;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 .container {
-        max-width: 1200px;
-        margin: 0 auto;
-        padding: 0 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
 }
 
+/* ШАПКА */
 .header {
-        background-color: #3d2b1f;
-        position: sticky;
-        top: 0;
-        z-index: 100;
+    background-color: #3d2b1f;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    padding: 20px 0;
 }
 
 .header-inner {
@@ -30,17 +33,233 @@ body {
     align-items: center;
 }
 
-nav a{
-        color: #faf6f0;
-        text-decoration: none;
+nav a {
+    color: #faf6f0;
+    text-decoration: none;
+    margin-left: 30px;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #d4a574;
 }
 
 .logo {
-        text-decoration: none;
-        font-size: 32px;
-        color: #faf6f0;
+    font-family: 'Playfair Display', serif;
+    text-decoration: none;
+    font-size: 32px;
+    color: #faf6f0;
+    letter-spacing: 2px;
 }
 
-.Hero {
-        color: #faf6f0;
+/* ГЕРОЙ */
+.hero {
+    color: #ffffff;
+    background: linear-gradient(135deg, #3d2b1f, #6b4a2f);
+    padding: 100px 0;
+    text-align: center;
+    min-height: 60vh;
+}
+
+.hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 56px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    line-height: 1.2;
+}
+
+.hero p {
+    padding: 20px;
+    margin-bottom: 40px;
+    font-size: 24px;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+/* КНОПКИ */
+.btn {
+    display: inline-block;
+    padding: 14px 32px;
+    background: #d4a574;
+    color: #3d2b1f;
+    border-radius: 8px;
+    font-size: 20px;
+    transition: 0.3s;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.btn:hover {
+    background: #c49464;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+}
+
+/* КАТАЛОГ */
+.catalog {
+    background: #3d2b1f;
+    padding: 80px 0;
+}
+
+.catalog-title {
+    text-align: center;
+    font-family: 'Playfair Display', serif;
+    font-size: 42px;
+    color: #ffffff;
+    margin-bottom: 50px;
+}
+
+.catalog-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+/* КАРТОЧКА */
+.product-card {
+    background: #fff;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+    transition: 0.3s;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 30px rgba(0,0,0,0.25);
+}
+
+.product-image {
+    height: 250px;
+    background-color: #e8dcc8;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* ФОТО ДЛЯ КАЖДОЙ КАРТОЧКИ */
+.img-1 {
+    background-image: url('https://sun9-5.vkuserphoto.ru/s/v1/ig2/1kDsGN6eqrg6DBztlmuCsEyhUyjaP57Tp9ccK2qVrheX2JqtQzVY3tRUgjwYLpf5zGF9jfRXo2ieAFUNSCU64uo4.jpg?quality=95&as=32x43,48x64,72x96,108x144,160x213,240x320,360x480,480x640,540x720,640x853,720x960,1080x1440,1280x1707,1440x1920,1920x2560&from=bu&u=WkFPX8sOT--Fpm3p4NzORmSuvn-mdOXuletqPXjOVaM&cs=1920x0');
+}
+.img-2 {
+    background-image: url('https://sun9-70.vkuserphoto.ru/s/v1/ig2/ixyKaGdSBs61_MxlVhb4A-S5WsdiVfnXcLb4dazTo_2A_Pd3ISejSpaCt8PbrLGZTk6eY1f-vNFw6fJySTSYRSSK.jpg?quality=95&as=32x24,48x36,72x54,108x81,160x120,240x180,360x270,480x360,540x405,640x480,720x540,1080x810,1280x960,1440x1080,2560x1920&from=bu&u=i32L3n9q7lnAlWFtR_ASEYSBlPpY2VZAR7YQbW3TzZw&cs=2560x0');
+}
+.img-3 {
+    background-image: url('https://sun9-53.vkuserphoto.ru/s/v1/ig2/OHutehmPgOlzfPZmusgzdLBtdKZaLzxjh1agwdEUnbi9QfmF-9IweG6jcNiFgj4_reNws9ggsYgRYcJj3x_lUxFB.jpg?quality=95&as=32x24,48x36,72x54,108x81,160x120,240x180,360x270,480x360,540x405,640x480,720x540,1080x810,1280x960,1440x1080,2560x1920&from=bu&u=77aHj7AfbhbNH0D-5rEk3r2EruPkZ1jUPv8F95hrFlQ&cs=2560x0');
+}
+.img-4 {
+    background-image: url('https://sun9-84.vkuserphoto.ru/s/v1/ig2/D9PtOoW0SOwOk5MQwgHM5doA7K9Y3smZVhch0EGug5kp8OkPBHY4ucaW0hwIOzWaFNb5YowR8ji4P4wXpLlXtshc.jpg?quality=95&as=32x24,48x36,72x54,108x81,160x120,240x180,360x270,480x360,540x405,640x480,720x540,1080x810,1280x960,1440x1080,2560x1920&from=bu&u=5U1jk4-mp2qpeAPdd_brgYbAyRMgEQeM9ke_AN9Vc0E&cs=2560x0');
+}
+.img-5 {
+    background-image: url('https://sun9-19.vkuserphoto.ru/s/v1/ig2/krWa8FnsKr9eh70A1TC2f5veQ4VA8qnLgrydaexGumWpCnQJOMsg9sQuXcLQJY_jhcROsnClf-1afAjU2tAEpO6C.jpg?quality=95&as=32x43,48x64,72x96,108x144,160x213,240x320,360x480,480x640,540x720,640x853,720x960,1080x1440,1280x1707,1440x1920,1920x2560&from=bu&u=fXRKDlk3FkyRxi9nr5n0P4NMSu_uY2Qr91KEdFgrvBY&cs=1920x0');
+}
+.img-6 {
+    background-image: url('https://sun9-58.vkuserphoto.ru/s/v1/ig2/cuRDyvvY_DuxyFyc6nmF0Kb6FY0gly10l1k8bI0PK51OvWvY0IIKxZDHmcnM6Cr0y3Vu_rOTo0eD3lhEnZyifSRE.jpg?quality=95&as=32x24,48x36,72x54,108x81,160x120,240x180,360x270,480x360,540x405,640x480,720x540,1080x810,1280x960,1440x1080,2560x1920&from=bu&u=8UXAiwK8KoGKZHJc7t3q5ewbLMOT_U6UcO769kq48kc&cs=2560x0');
+}
+
+.product-info {
+    padding: 20px;
+}
+
+.product-name {
+    font-family: 'Playfair Display', serif;
+    font-size: 22px;
+    color: #3d2b1f;
+    margin-bottom: 10px;
+}
+
+.product-desc {
+    font-size: 14px;
+    color: #777;
+    margin-bottom: 15px;
+    line-height: 1.5;
+}
+
+.product-price {
+    font-size: 26px;
+    font-weight: 700;
+    color: #6b4a2f;
+    margin-bottom: 15px;
+}
+
+.btn-buy {
+    width: 100%;
+    padding: 12px;
+    border-radius: 10px;
+    border: none;
+    background: #3d2b1f;
+    color: #faf6f0;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-buy:hover {
+    background: #6b4a2f;
+}
+
+/* КОНТАКТЫ */
+.contacts {
+    padding: 80px 0;
+    background: #f0e8dc;
+}
+
+.contacts-title {
+    text-align: center;
+    font-family: 'Playfair Display', serif;
+    font-size: 42px;
+    color: #3d2b1f;
+    margin-bottom: 50px;
+}
+
+.contacts-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 30px;
+    text-align: center;
+}
+
+.contact-label {
+    font-size: 14px;
+    color: #999;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 8px;
+}
+
+.contact-value {
+    font-size: 20px;
+    color: #3d2b1f;
+    font-weight: 500;
+}
+
+/* ПОДВАЛ */
+.footer {
+    background: #3d2b1f;
+    color: #faf6f0;
+    text-align: center;
+    padding: 30px 0;
+    font-size: 14px;
+}
+
+/* АДАПТИВ */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 36px;
+    }
+    
+    .catalog-title,
+    .contacts-title {
+        font-size: 32px;
+    }
+    
+    nav a {
+        margin-left: 15px;
+        font-size: 14px;
+    }
+    
+    .logo {
+        font-size: 24px;
+    }
 }
