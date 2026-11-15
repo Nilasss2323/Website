@@ -1,0 +1,428 @@
+/* ОБЩИЕ */
+body {
+    font-family: 'Roboto', sans-serif;
+    background: #faf6f0;
+    color: #2a2a2a;
+    line-height: 1.6;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* ШАПКА */
+.header {
+    background-color: #3d2b1f;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    padding: 20px 0;
+}
+
+.header-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 28px;
+}
+
+nav a {
+    color: #faf6f0;
+    text-decoration: none;
+    margin-left: 30px;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #d4a574;
+}
+
+.logo {
+    font-family: 'Playfair Display', serif;
+    text-decoration: none;
+    font-size: 32px;
+    color: #faf6f0;
+    letter-spacing: 2px;
+}
+
+/* ГЕРОЙ */
+.hero {
+    color: #ffffff;
+    background-image:
+        linear-gradient(rgba(61, 43, 31, 0.6), rgba(61, 43, 31, 0.6)),
+        url('images/hero.jpg');
+    background-size: cover;
+    background-position: center;
+    padding: 100px 0;
+    text-align: center;
+    min-height: 60vh;
+}
+
+.hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 56px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    line-height: 1.2;
+}
+
+.hero p {
+    padding: 20px;
+    margin-bottom: 40px;
+    font-size: 24px;
+}
+
+/* КНОПКИ */
+.btn {
+    display: inline-block;
+    padding: 14px 32px;
+    background: #d4a574;
+    color: #3d2b1f;
+    border-radius: 8px;
+    font-size: 20px;
+    transition: 0.3s;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.btn:hover {
+    background: #c49464;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+}
+
+/* КАТАЛОГ */
+.catalog {
+    background: #3d2b1f;
+    padding: 80px 0;
+}
+
+.catalog-title {
+    text-align: center;
+    font-family: 'Playfair Display', serif;
+    font-size: 42px;
+    color: #ffffff;
+    margin-bottom: 50px;
+}
+
+.catalog-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+/* КАРТОЧКА */
+.product-card {
+    background: #fff;           /* Вернули белый фон */
+    border-radius: 20px;        /* Вернули скругления */
+    overflow: hidden;           /* Чтобы картинка не вылезала */
+    box-shadow: 0 4px 20px rgba(0,0,0,0.15); /* Вернули тень */
+    transition: 0.3s;           /* Плавность анимации */
+    
+    display: flex;              /* Твоя добавка для кнопки */
+    flex-direction: column;     /* Твоя добавка для кнопки */
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 30px rgba(0,0,0,0.25);
+}
+
+.product-image {
+    height: 250px;
+    background-color: #e8dcc8;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.product-photo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.3s;
+    display: block;
+}
+
+.product-card:hover .product-photo {
+    transform: scale(1.05);
+}
+
+.product-info {
+    padding: 20px;              /* Вернули отступы */
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.product-name {
+    font-family: 'Playfair Display', serif;
+    font-size: 22px;
+    color: #3d2b1f;
+    margin-bottom: 10px;
+}
+
+.product-desc {
+    font-size: 14px;
+    color: #777;
+    margin-bottom: 15px;
+    line-height: 1.5;
+}
+
+.product-price {
+    font-size: 26px;
+    font-weight: 700;
+    color: #6b4a2f;
+    margin-bottom: 15px;
+}
+
+.btn-buy {
+    display: block;   
+    margin-top: auto; /* Прижимает кнопку к самому низу карточки */     /* <--- ВОТ ЭТА СТРОЧКА РЕШИТ ВСЁ */
+    width: 100%;
+    padding: 12px;
+    border-radius: 10px;
+    border: none;
+    background: #3d2b1f;
+    color: #faf6f0;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+    text-align: center;    /* Чтобы текст был по центру */
+    text-decoration: none; /* Убираем подчеркивание у ссылки */
+    box-sizing: border-box;/* Чтобы padding не вылезал за края */
+}
+
+.btn-buy:hover {
+    background: #6b4a2f;
+}
+
+/* КОНТАКТЫ */
+.contacts {
+    padding: 80px 0;
+    background: #f0e8dc;
+}
+
+.contacts-title {
+    text-align: center;
+    font-family: 'Playfair Display', serif;
+    font-size: 42px;
+    color: #3d2b1f;
+    margin-bottom: 50px;
+}
+
+.contacts-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 30px;
+    text-align: center;
+}
+
+.contact-label {
+    font-size: 14px;
+    color: #999;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 8px;
+}
+
+.contact-value {
+    font-size: 20px;
+    color: #3d2b1f;
+    font-weight: 500;
+}
+
+.contact-name {
+    font-size: 20px;
+    color: #3d2b1f;
+    font-weight: 500;
+}
+
+/* ПОДВАЛ */
+.footer {
+    background: #3d2b1f;
+    color: #faf6f0;
+    text-align: center;
+    padding: 30px 0;
+    font-size: 14px;
+}
+
+/* ССЫЛКИ */
+.button-link {
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 20px;
+    color: #3d2b1f;
+}
+
+/* ЛАЙТБОКС */
+.lightbox {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.92);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+}
+
+.lightbox.active {
+    display: flex;
+}
+
+.lightbox-image {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 8px;
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.6);
+    user-select: none;
+}
+
+.hidden-photo {
+    display: none;
+}
+
+.lightbox-close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 40px;
+    cursor: pointer;
+    transition: 0.3s;
+    line-height: 1;
+    z-index: 1001;
+}
+
+.lightbox-close:hover {
+    color: #d4a574;
+    transform: rotate(90deg);
+}
+
+.lightbox-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255, 255, 255, 0.15);
+    border: none;
+    color: #fff;
+    font-size: 50px;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 0.3s;
+    line-height: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1001;
+}
+
+.lightbox-arrow:hover {
+    background: rgba(212, 165, 116, 0.8);
+}
+
+.lightbox-prev {
+    left: 30px;
+}
+
+.lightbox-next {
+    right: 30px;
+}
+
+/* АДАПТИВ */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 36px;
+    }
+    
+    .catalog-title,
+    .contacts-title {
+        font-size: 32px;
+    }
+    
+    nav a {
+        margin-left: 15px;
+        font-size: 14px;
+    }
+    
+    .logo {
+        font-size: 24px;
+    }
+    
+    .lightbox-arrow {
+        width: 50px;
+        height: 50px;
+        font-size: 36px;
+    }
+    
+    .lightbox-prev { left: 10px; }
+    .lightbox-next { right: 10px; }
+    
+    .lightbox-close {
+        top: 10px;
+        right: 15px;
+        font-size: 32px;
+    }
+}
+
+/* Кнопка под каталогом */
+.catalog-more {
+    text-align: center;
+    margin-top: 60px; /* Отступ от карточек */
+}
+
+.catalog-more p {
+    color: #faf6f0; /* Светлый текст */
+    font-size: 18px;
+    margin-bottom: 20px;
+    opacity: 0.9;
+}
+
+.btn:active {
+    background: #a87b50;
+    transform: translateY(1px);
+    box-shadow: inset 0 3px 5px rgba(0,0,0,0.2);
+}
+
+.btn-custom {
+    display: inline-block;
+    padding: 16px 40px;
+    background: #d4a574; /* Твой золотистый цвет */
+    color: #3d2b1f;
+    border-radius: 10px;
+    font-size: 18px;
+    font-weight: 500;
+    text-decoration: none;
+    transition: 0.3s;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.btn-buy:active {
+    background: #2a1e15; /* Очень темный, почти черный */
+    transform: translateY(1px); /* Кнопка как будто вдавливается */
+    box-shadow: inset 0 3px 5px rgba(0,0,0,0.3); /* Внутренняя тень (эффект нажатия) */
+}
+
+.btn-custom:hover {
+    background: #c49464;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+}
+
+.btn-custom:active {
+    background: #a87b50; /* Темное золото */
+    transform: translateY(1px);
+    box-shadow: inset 0 3px 5px rgba(0,0,0,0.2);
+}
